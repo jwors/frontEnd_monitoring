@@ -1,0 +1,22 @@
+{
+  "name": "frontend_monitoring",
+  "version": "1.0.0",
+  "description": "a frontend error collect monotoring",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwors/frontEnd_monitoring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwors/frontEnd_monitoring/issues"
+  },
+  "homepage": "https://github.com/jwors/frontEnd_monitoring#readme",
+  "dependencies": {
+    "rollup": "^4.45.1"
+  }
+}
