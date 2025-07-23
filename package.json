@@ -4,7 +4,9 @@
   "description": "a frontend error collect monotoring",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"rollup -c",
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
