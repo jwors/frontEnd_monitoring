@@ -10,14 +10,16 @@ export class Report {
 		this.isSending = false; // 是否在发送
 	}
 
+	// 上报数据
 	send (data) { 
 		this.queue.push(data);
 		// 如果不在发送状态，就开发发送
 		if (!this.isSending) { 
-
+			this.processQueue();
 		}
 	}
 
+	// 处理队列
 	async processQueue () { 
 		if (this.queue.length === 0) { 
 			this.isSending = false;
@@ -46,6 +48,7 @@ export class Report {
 
 	sendRequest (data) { 
 		return new Promise((resolve, reject) => { 
+			// 创建一个
 			const controller = new AbortController();
 			const timeoutId = setTimeout(
 				() => controller.abort(),

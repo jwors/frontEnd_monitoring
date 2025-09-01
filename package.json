@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"rollup -c",
+    "build": "rollup -c",
     "dev": "rollup -c -w"
   },
   "repository": {
@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/jwors/frontEnd_monitoring#readme",
   "dependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.45.1"
   }
 }

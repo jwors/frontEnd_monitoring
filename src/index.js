@@ -8,18 +8,21 @@ export default class ErrorMonitor {
 		this.options = {
 			dsn: '', // 数据接受地址
 			appId: '', // 应用id
-			enablePerformance: true,
-			enableXHRMonitoring: true,
+			enablePerformance: true, // 是否开启性能监控
+			enableXHRMonitoring: true, // 是否开启请求监控
 			...options
 		};
 		this.reporter = new Report({
+			/*
+				上报数据格式
+			*/
 			url: this.options.dsn,
 		});
 
 		this.init()
 	}
 	init () {
-		// 
+		// 初始化错误监控
 		new ErrorTracker({
 			onError: this.handleError.bind(this),
 		});
