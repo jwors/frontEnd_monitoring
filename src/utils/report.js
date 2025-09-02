@@ -18,6 +18,10 @@ export class Report {
 			this.processQueue();
 		}
 	}
+		}
+	}this.processQueue();
+		}
+	}
 
 	// 处理队列
 	async processQueue () { 
