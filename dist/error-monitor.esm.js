@@ -123,7 +123,11 @@ class Report {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        resolve();
+        // 关键改动：调用 response.json() 来读取和解析响应体
+        return response.json(); 
+      }).then(responseData => {
+        // 关键改动：将解析后的数据通过 resolve 传递出去
+        resolve(responseData); 
       }).catch(error => {
         clearTimeout(timeoutId);
         reject(error);
